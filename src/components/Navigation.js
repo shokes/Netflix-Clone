@@ -18,12 +18,12 @@ const Navigation = () => {
       title: 'Movies',
     },
     {
-      id: 1,
+      id: 4,
       title: 'My List',
     },
   ];
   return (
-    <section className='bg-black text-white'>
+    <section className='bg-black/10 text-white'>
       <div className='container'>
         <div className='flex justify-between items-center'>
           <div className='flex gap-[4rem] items-center'>
@@ -34,7 +34,7 @@ const Navigation = () => {
             />
             <ul className='flex gap-[2rem]'>
               {navItems.map((item) => {
-                return <li>{item.title}</li>;
+                return <li key={item.id}>{item.title}</li>;
               })}
             </ul>
           </div>
