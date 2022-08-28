@@ -11,20 +11,18 @@ const Hero = () => {
   const randomNumber = Math.floor(Math.random() * 20);
 
   if (cases.length !== 0) {
-    console.log(cases);
     const { backdrop_path: bg, name, overview } = cases?.results[randomNumber];
 
     return (
       <section
         style={{
           backgroundImage: `url('https://image.tmdb.org/t/p/original/${bg}')`,
-          // backgroundImage: `url(${externalImage})`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           height: '700px',
 
-          background: 'linear-gradient(#e66465, #9198e5)', 
+          // background: 'linear-gradient(#e66465, #9198e5)',
         }}
       >
         <Navigation />
