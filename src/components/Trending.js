@@ -15,14 +15,15 @@ const Trending = () => {
           <div className='flex'>
             {trending.map((item) => {
               const { poster_path: poster } = item;
-              console.log(poster);
 
               return (
-                <img
-                  src={`https://image.tmdb.org/t/p/original/${poster}`}
-                  alt='fff'
-                  className='w-[8rem] h-[4rem]'
-                />
+                <div key={poster}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/original/${poster}`}
+                    alt='fff'
+                    className='w-[8rem] h-[4rem]'
+                  />
+                </div>
               );
             })}
           </div>

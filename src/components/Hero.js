@@ -5,13 +5,17 @@ import { RiErrorWarningLine } from 'react-icons/ri';
 import Navigation from './Navigation';
 
 const Hero = () => {
-  const { cases } = useSelector((store) => store.shows);
+  const { heroMovie } = useSelector((store) => store.shows);
 
   // randomly picks out a movie from an array of 20 movies
   const randomNumber = Math.floor(Math.random() * 20);
 
-  if (cases.length !== 0) {
-    const { backdrop_path: bg, name, overview } = cases?.results[randomNumber];
+  if (heroMovie.length !== 0) {
+    const {
+      backdrop_path: bg,
+      name,
+      overview,
+    } = heroMovie?.results[randomNumber];
 
     return (
       <section

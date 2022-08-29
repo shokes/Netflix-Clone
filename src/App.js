@@ -1,14 +1,25 @@
 import Home from './pages/Home';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCases } from './features/show/showSlice';
+import { useDispatch } from 'react-redux';
+
 import { useEffect } from 'react';
-import { getTrending } from './features/show/showSlice';
+import {
+  getTrending,
+  getTopRated,
+  getHeroMovie,
+  getAction,
+  getComedy,
+  getHorror,
+} from './features/show/showSlice';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getCases());
+    dispatch(getHeroMovie());
     dispatch(getTrending());
+    dispatch(getTopRated());
+    dispatch(getAction());
+    dispatch(getComedy());
+    dispatch(getHorror());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
