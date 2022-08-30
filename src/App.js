@@ -9,6 +9,8 @@ import {
   getAction,
   getComedy,
   getHorror,
+  getDocumentaries,
+  getRomance,
 } from './features/show/showSlice';
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
     dispatch(getAction());
     dispatch(getComedy());
     dispatch(getHorror());
+    dispatch(getDocumentaries());
+    dispatch(getRomance());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
