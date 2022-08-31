@@ -8,12 +8,16 @@ import Comedy from '../components/Comedy';
 import Horror from '../components/Horror';
 import Romance from '../components/Romance';
 import Documentaries from '../components/Documentaries';
+import Shows from '../components/Shows';
 
 const Home = () => {
   return (
     <main>
       {/* <Navigation /> */}
       <Hero />
+
+      {/* <Shows /> */}
+
       <Trending />
       <TopRated />
       <Action />

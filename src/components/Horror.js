@@ -17,18 +17,18 @@ const Horror = () => {
 
   if (horror.length !== 0) {
     return (
-      <section className='bg-black'>
+      <section className='pt-[4rem]'>
         <div className='ml-[2rem]'>
           <h3 className='font-bold text-2xl text-white mb-3'>Horror</h3>
           <Swiper
             slidesPerView={5}
             spaceBetween={4}
-            slidesPerGroup={3}
+            slidesPerGroup={5}
             loop={true}
             loopFillGroupWithBlank={false}
-            pagination={{
-              clickable: true,
-            }}
+            // pagination={{
+            //   clickable: true,
+            // }}
             navigation={true}
             modules={[Pagination, Navigation]}
             className='mySwiper'
