@@ -16,8 +16,6 @@ const Home = () => {
       {/* <Navigation /> */}
       <Hero />
 
-      {/* <Shows /> */}
-
       <Trending />
       <TopRated />
       <Action />

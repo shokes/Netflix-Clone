@@ -10,4 +10,16 @@
 body {
   background-color: #0f0f0f;
   font-family: 'Roboto', sans-serif;
+  /* transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1); */
+}
+
+.movie {
+  transition: all 0.2s ease;
+}
+
+.movie:hover {
+  /* transform: scale(2); */
+
+  transform: scaleY(6);
 }

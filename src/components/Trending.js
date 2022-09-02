@@ -12,7 +12,7 @@ import 'swiper/css/navigation';
 // import './styles.css';
 
 // import required modules
-import { Pagination, Navigation } from 'swiper';
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
 
 const Trending = () => {
   const { trending } = useSelector((store) => store.shows);
@@ -31,8 +31,8 @@ const Trending = () => {
             //   clickable: true,
             // }}
             navigation={true}
-            modules={[Pagination, Navigation]}
-            className='mySwiper'
+            modules={[Pagination, Navigation, Scrollbar, A11y]}
+            // className='mySwiper'
           >
             <div className='flex'>
               {trending.map((item) => {
@@ -43,7 +43,7 @@ const Trending = () => {
                     <img
                       src={`https://image.tmdb.org/t/p/original/${poster}`}
                       alt='trending'
-                      className='w-full h-[9rem] rounded-[0.2rem]'
+                      className='w-full h-[9rem] rounded-[0.2rem] transition ease-in-out delay-150 movie  duration-300'
                     />
                   </SwiperSlide>
                 );

@@ -38,7 +38,7 @@ const TopRated = () => {
                     <img
                       src={`https://image.tmdb.org/t/p/original/${poster}`}
                       alt='top rated'
-                      className='w-full h-[9rem] rounded-[0.2rem]'
+                      className='w-full h-[9rem] rounded-[0.2rem] movie'
                     />
                   </SwiperSlide>
                 );

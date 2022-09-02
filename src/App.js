@@ -1,6 +1,9 @@
 import Home from './pages/Home';
 import { useDispatch } from 'react-redux';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import TvShows from './pages/TvShows';
+import Movies from './pages/Movies';
+import List from './pages/List';
 import { useEffect } from 'react';
 import {
   getTrending,
@@ -27,9 +30,14 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <section>
-      <Home />
-    </section>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/tvshows' element={<TvShows />} />
+        <Route path='/movies' element={<Movies />} />
+        <Route path='/list' element={<List />} />
+      </Routes>
+    </Router>
   );
 }
 

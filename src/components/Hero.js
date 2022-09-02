@@ -3,12 +3,17 @@ import { useSelector } from 'react-redux';
 import { RiPlayFill } from 'react-icons/ri';
 import { RiErrorWarningLine } from 'react-icons/ri';
 import Navigation from './Navigation';
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
+  const [randomNumber, setRandomNumber] = useState(3);
   const { heroMovie } = useSelector((store) => store.shows);
 
   // randomly picks out a movie from an array of 20 movies
-  const randomNumber = Math.floor(Math.random() * 20);
+  useEffect(() => {
+    const numb = Math.floor(Math.random() * 20);
+    setRandomNumber(numb);
+  }, []);
 
   if (heroMovie.length !== 0) {
     const {
