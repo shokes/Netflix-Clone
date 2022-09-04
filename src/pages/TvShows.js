@@ -1,11 +1,10 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
+import Hero from '../components/Hero';
 
 const TvShows = () => {
   return (
     <section>
-      <Navigation />
-      <div>tv shows</div>
+      <Hero />
     </section>
   );
 };
